@@ -22,7 +22,7 @@ class _PlanetListScreenState extends State<PlanetListScreen> {
 
   Future<void> fetchSolarData() async {
     try {
-      final response = await http.get(Uri.parse('https://systeme-solaire-api.onrender.com/'));
+      final response = await http.get(Uri.parse('http://192.168.0.102:80/'));
 
       if (response.statusCode == 200) {
         final List<dynamic> data = jsonDecode(response.body);
@@ -113,13 +113,7 @@ class _PlanetListScreenState extends State<PlanetListScreen> {
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
                             ),
-                          ),
-                          const SizedBox(height: 8),
-                          Text(
-                            item['description'],
-                            maxLines: 3,
-                            overflow: TextOverflow.ellipsis,
-                          ),
+                          )
                         ],
                       ),
                     ),
