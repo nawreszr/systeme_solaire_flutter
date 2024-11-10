@@ -10,8 +10,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
+    return const MaterialApp(
+      title: 'النظام الشمسي',
       debugShowCheckedModeBanner: false,
       home: PlanetListScreen(),
     );
