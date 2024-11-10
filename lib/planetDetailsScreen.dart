@@ -21,7 +21,10 @@ class PlanetDetailsScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Image.asset(image),
+          Image.network(
+            image,
+            errorBuilder: (context, error, stackTrace) => const Icon(Icons.error),
+          ),
           const SizedBox(height: 20),
           Text(
             name,
